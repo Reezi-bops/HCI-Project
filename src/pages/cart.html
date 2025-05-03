@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../../images/logo.png" alt="NOIRÉL Co. Logo">
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="about.html">Contact</a>
+      </nav>
+      <div class="header-buttons">
+        <button class="cart-button" onclick="window.location.href='checkout.html'">
+          <span id="cart-count" class="cart-badge">0</span>
+          <img src="../../images/cart.png" alt="carticon">
+        </button>
+        <button id="openModalBtn"><img src="../../images/favicon.png" alt="wishlist"></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Order Summary</h1>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Quantity</th><th>Subtotal</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="totals" id="totals-section">
+      <div class="totals-line" id="shipping-fee" style="display:none;">
+        <span>Shipping Fee:</span><span>PHP 50</span>
+      </div>
+      <div class="totals-line">
+        <strong>TOTAL:</strong><strong id="cart-total">PHP 0</strong>
+      </div>
+      <button class="place-order">Place Order</button>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Payment Details</h2>
+      <form id="paymentForm">
+        <input type="text" placeholder="Name Card" required>
+        <input type="text" placeholder="Card Number" required>
+        <input type="text" placeholder="MM/YYYY" required>
+        <input type="text" placeholder="CVV" required>
+        <button type="submit">Confirm Payment</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <h2 style="color: #9E8123;">🎉 Thank you for your order!</h2>
+      <p>Your payment was successful and your order has been placed.</p>
+      <a href="shop.html" class="back-btn">Back to Shop</a>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div class="modal" id="wishlistModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Wishlist</h2>
+      <div id="wishlistItems">
+        <p class="empty-message">Your wishlist is empty.</p>
+      </div>
+      <template id="wishlistItemTemplate">
+        <div class="wishlist-item">
+          <div class="wishlist-info">
+            <img class="wishlist-img" src="" alt="">
+            <div class="wishlist-details">
+              <span class="wishlist-name"></span>
+              <span class="wishlist-price"></span>
+            </div>
+          </div>
+          <button class="remove-wishlist-btn">Remove</button>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 NOIRÉL Co. All rights reserved.
+  </footer>
+  <script src="js/cart.js"></script>
+</body>
+</html>

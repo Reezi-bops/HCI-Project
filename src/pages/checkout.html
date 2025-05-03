@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="./css/checkout.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../../images/logo.png" alt="NOIRÉL Co. Logo">
+      </div>
+      <div class="tagline">
+        Wear Your Style, Every Day
+      </div>
+      <div class="back-button-wrapper">
+        <button onclick="history.back()" class="back-button">
+          ← CONTINUE SHOPPING
+        </button>
+      </div>
+      <div class="header-buttons">
+        <button onclick="window.location.href='cart.html'">
+          <img src="../../images/cart.png" alt="cart icon">
+          <span id="cart-count" class="cart-badge">0</span>
+        </button>
+        <button id="openModalBtn">
+          <img src="../../images/favicon.png" alt="wishlist">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+    <div class="image-container"></div>
+
+    <div class="product-info">
+      <h1>Shadow Sonic</h1>
+      <div class="subtitle">T-Shirt</div>
+
+      <div>Size</div>
+      <div class="sizes">
+        <button onclick="selectSize(this)">XS</button>
+        <button onclick="selectSize(this)">S</button>
+        <button onclick="selectSize(this)">M</button>
+        <button onclick="selectSize(this)">L</button>
+        <button onclick="selectSize(this)">XL</button>
+        <button onclick="selectSize(this)">XXL</button>
+      </div>
+
+      <div class="price">PHP 749</div>
+
+      <div class="quantity">
+        <button onclick="updateQty(-1)">−</button>
+        <span id="qty">0</span>
+        <button onclick="updateQty(1)">+</button>
+      </div>
+
+      <div class="stock-warning">Low Stock</div>
+
+      <button class="add-to-cart">ADD TO CART</button>
+
+      <ul class="materials-list">
+        <li>Premium combed cotton</li>
+        <li>Reinforced double stitching</li>
+        <li>Soft-touch, breathable fabric</li>
+        <li>Durable ribbed neckline</li>
+        <li>Fade-resistant dye</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="wishlistModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Your Wishlist</h2>
+        <div id="wishlistItems">
+          <p class="empty-message">Your wishlist is empty.</p>
+        </div>
+        
+        <template id="wishlistItemTemplate">
+          <div class="wishlist-item">
+            <div class="wishlist-info">
+              <img src="" alt="">
+              <span class="wishlist-name-price"></span>
+            </div>
+            <div class="wishlist-details">
+        <span class="wishlist-name"></span>
+        <span class="wishlist-price"></span>
+      </div>
+            <button class="remove-wishlist-btn">Remove</button>
+          </div>
+        </template>
+    </div>
+  </div>
+  <!-- Modal END-->
+
+  <footer>
+    &copy; 2025 NOIRÉL Co. All rights reserved.
+  </footer>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
