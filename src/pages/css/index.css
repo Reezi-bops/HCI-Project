@@ -3,14 +3,15 @@
     from { opacity: 0; transform: translateX(50px); }
     to { opacity: 1; transform: translateX(0); }
 }
-/* === Animation End === */
 
+/* === Body === */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #121212;
     color:#563A17;
 }
+
 /* === Header === */
 header {
     position: sticky;
@@ -21,17 +22,17 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
-    z-index: 1000; 
-  }
-  .header-buttons {
+    z-index: 1000;
+}
+.header-buttons {
     position: absolute;
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     gap: 30px;
-  }
-  .header-buttons button {
+}
+.header-buttons button {
     background-color: #9E8123;
     color: #121212;
     padding: 8px 16px;
@@ -42,21 +43,21 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-  }
-  .header-buttons button:hover {
+}
+.header-buttons button:hover {
     transform: scale(1.05);
     background-color: #bfa74f;
     box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
-  }
-  .header-buttons button img.wishlish-icon {
+}
+.header-buttons button img.wishlish-icon {
     width: 22px;
     height: 22px;
     filter: brightness(0) saturate(100%) sepia(41%) hue-rotate(4deg) saturate(700%) brightness(0.95);
-  }
-  .cart-button {
-    position: relative; 
-  }
-  .cart-badge {
+}
+.cart-button {
+    position: relative;
+}
+.cart-badge {
     position: absolute;
     top: -8px;
     right: -8px;
@@ -66,8 +67,8 @@ header {
     padding: 2px 6px;
     font-size: 12px;
     display: inline;
-  }
-  .header-container {
+}
+.header-container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
@@ -75,32 +76,33 @@ header {
     align-items: center;
     flex-direction: column;
     position: relative;
-  }
-  .logo {
+}
+.logo {
     position: absolute;
     right: 100%;
     top: 50%;
     transform: translateY(-50%);
-  }
-  .logo img {
-    height: 170px; 
+}
+.logo img {
+    height: 170px;
     width: auto;
-  }
-  .header-buttons img {
+}
+.header-buttons img {
     width: 24px;
     height: 24px;
     object-fit: contain;
-  }
-  nav a {
+}
+nav a {
     margin: 0 15px;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-  }
-  nav a:hover {
+}
+nav a:hover {
     color: #bfa74f;
-  }
-  /* === Header END === */
+}
+
+/* === Hero Section === */
 .hero {
     padding: 40px 20px;
     text-align: center;
@@ -116,11 +118,15 @@ header {
     font-size: 20px;
     color: #cccccc;
 }
+
+/* === Section === */
 .section {
     padding: 50px 20px;
     text-align: center;
     animation: slideIn 0.6s ease forwards;
 }
+
+/* === Products Grid === */
 .products {
     display: flex;
     justify-content: center;
@@ -128,6 +134,8 @@ header {
     gap: 20px;
     animation: slideIn 0.6s ease forwards;
 }
+
+/* === Product Card === */
 .product-card {
     background-color: #2f2921;
     border: 1px solid #333;
@@ -140,8 +148,8 @@ header {
     transform: translateY(-5px);
 }
 .product-card img {
-    width: 200px;   
-    height: 200px;  
+    width: 200px;
+    height: 200px;
     border-radius: 5px;
 }
 .product-card h3 {
@@ -150,6 +158,8 @@ header {
 .product-card p {
     color: #ffffff;
 }
+
+/* === Button === */
 .btn {
     background-color: #9E8123;
     color: #121212;
@@ -161,7 +171,6 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 3px 6px rgba(191, 167, 79, 0.3);
-    
 }
 .btn:hover {
     transform: scale(1.05);
@@ -169,6 +178,7 @@ header {
     box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
 }
 
+/* === Footer === */
 footer {
     text-align: center;
     padding: 20px;

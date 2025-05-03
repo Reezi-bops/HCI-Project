@@ -1,3 +1,4 @@
+// --- VARIABLES ---
 const filterButtons = document.querySelectorAll('.filter-btn');
 const productCards = document.querySelectorAll('.product-card');
 const searchInput = document.querySelector('.search-container input');
@@ -8,12 +9,12 @@ const closeModalBtn = document.querySelector(".close");
 let currentCategory = 'all';
 let searchQuery = '';
 
-// --- Helper: Get Wishlist ---
+// --- GET WISHLIST ---
 function getWishlist() {
   return JSON.parse(localStorage.getItem('wishlistItems')) || [];
 }
 
-// --- Filter & Search ---
+// --- UPDATE FILTERS ---
 function updateFilters() {
   productCards.forEach(card => {
     const categories = card.getAttribute('data-category')?.split(',').map(c => c.trim().toLowerCase()) || [];
@@ -25,14 +26,14 @@ function updateFilters() {
   });
 }
 
-// --- Buy Product ---
+// --- BUY PRODUCT ---
 function buyProduct(name, image, price) {
   const product = { name, image, price };
   localStorage.setItem('selectedProduct', JSON.stringify(product));
   window.location.href = 'checkout.html';
 }
 
-// --- Wishlist ---
+// --- ADD TO WISHLIST ---
 function addToWishlist(name, image, price) {
   let wishlist = getWishlist();
   if (!wishlist.find(item => item.name === name)) {
@@ -41,7 +42,8 @@ function addToWishlist(name, image, price) {
   localStorage.setItem('wishlistItems', JSON.stringify(wishlist));
 }
 
-function renderWishlist() {
+// --- RENDER WISHLIST (SIMPLE) ---
+function renderWishlistSimple() {
   let wishlist = getWishlist();
   const container = document.getElementById('wishlistItems');
   container.innerHTML = '';
@@ -62,7 +64,7 @@ function renderWishlist() {
   });
 }
 
-// --- Cart Count ---
+// --- UPDATE CART COUNT ---
 function updateCartCount() {
   let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
   const count = cart.reduce((acc, item) => acc + (item.qty || 0), 0);
@@ -72,7 +74,7 @@ function updateCartCount() {
   }
 }
 
-// --- Init Filter ---
+// --- FILTER BUTTON EVENTS ---
 filterButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     filterButtons.forEach(b => b.classList.remove('active'));
@@ -82,6 +84,7 @@ filterButtons.forEach(btn => {
   });
 });
 
+// --- SEARCH INPUT EVENT ---
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
     searchQuery = e.target.value.trim().toLowerCase();
@@ -89,23 +92,25 @@ if (searchInput) {
   });
 }
 
-// --- Wishlist Modal ---
+// --- WISHLIST MODAL OPEN ---
 openModalBtn.onclick = function() {
   renderWishlist();
   modal.style.display = "block";
 }
 
+// --- WISHLIST MODAL CLOSE ---
 closeModalBtn.onclick = function() {
   modal.style.display = "none";
 }
 
+// --- CLOSE MODAL OUTSIDE CLICK ---
 window.onclick = function(event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }
 }
 
-// --- Fav Button Bindings ---
+// --- WISHLIST BUTTON EVENTS ---
 document.querySelectorAll('.fav-btn').forEach(button => {
   button.addEventListener('click', (e) => {
     const productCard = e.target.closest('.product-card');
@@ -117,7 +122,7 @@ document.querySelectorAll('.fav-btn').forEach(button => {
   });
 });
 
-// --- Init ---
+// --- RENDER WISHLIST (TEMPLATE) ---
 function renderWishlist() {
   const wishlist = JSON.parse(localStorage.getItem('wishlistItems')) || [];
   const container = document.getElementById('wishlistItems');
@@ -149,6 +154,7 @@ function renderWishlist() {
   });
 }
 
+// --- REMOVE FROM WISHLIST ---
 function removeFromWishlist(index) {
   const wishlist = JSON.parse(localStorage.getItem('wishlistItems')) || [];
   wishlist.splice(index, 1);
@@ -156,5 +162,7 @@ function removeFromWishlist(index) {
   renderWishlist();
 }
 
+// --- INITIALIZE ---
 updateFilters();
 updateCartCount();
+renderWishlistSimple();
