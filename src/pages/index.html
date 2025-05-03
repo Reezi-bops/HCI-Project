@@ -7,15 +7,28 @@
   <link rel="stylesheet" href="./css/index.css">
 <body>
 
-  <header>
-    NOIRÉL Co.
-    <nav>
+   <!-- Header -->
+   <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../../images/logo.png" alt="NOIRÉL Co. Logo">
+      </div>
+      <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
         <a href="about.html">Contact</a>
-    </nav>
+      </nav>
+      <div class="header-buttons">
+        <button onclick="window.location.href='cart.html'">
+          <img src="../../images/cart.png" alt="carticon">
+          <span id="cart-count" class="cart-badge">0</span>
+        </button>
+        <button><img src="../../images/favicon.png" alt="wishlisht" id="openModalBtn"></button>
+      </div>
+    </div>
   </header>
+  <!-- Header END-->
 
   <section class="hero">
         <h1>Wear Your Style, Every Day</h1>
@@ -28,64 +41,28 @@
                 <div class="product-card">
                     <img src="../../images/shadowtee.png" alt="Shirt 1">
                     <h3>Shadow Tee</h3>
-                    <p>$25.00</p>
+                    <p>PHP 949</p>
                     <button class="btn">Buy Now</button>
                 </div>
                 <div class="product-card">
                 <img src="../../images/midnighthoodie.png" alt="Shirt 2">
                     <h3>Midnight Hoodie</h3>
-                    <p>$40.00</p>
-                    <button class="btn">Buy Now</button>
+                    <p>PHP 1,349</p>
+                    <button class="btn" href="index.html">Buy Now</button>
                 </div>
                 <div class="product-card">
                     <img src="../../images/urbanjacket.png" alt="Shirt 3">
                     <h3>Urban Jacket</h3>
-                    <p>$60.00</p>
+                    <p>PHP 1,599</p>
                     <button class="btn">Buy Now</button>
                 </div>
                 <div class="product-card">
                     <img src="../../images/darkdenim.png" alt="Shirt 4">
                     <h3>Dark Denim</h3>
-                    <p>$45.00</p>
+                    <p>PHP 1,999</p>
                     <button class="btn">Buy Now</button>
                 </div>
-                <div class="product-card">
-                    <img src="../../images/obsidiancap.png" alt="Shirt 5">
-                    <h3>Obsidian Cap</h3>
-                    <p>$15.00</p>
-                    <button class="btn">Buy Now</button>
-                </div>
-                <div class="product-card">
-                    <img src="../../images/pants.png" alt="Shirt 6">
-                    <h3>Nightfall Pants</h3>
-                    <p>$50.00</p>
-                    <button class="btn">Buy Now</button>
-                </div>
-                <div class="product-card">
-                    <img src="../../images/beannie.png"Shirt 7">
-                    <h3>Blackout Beanie</h3>
-                    <p>$18.00</p>
-                    <button class="btn">Buy Now</button>
-                </div>
-                <div class="product-card">
-                    <img src="../../images/vest.png" alt="Shirt 8">
-                    <h3>Rogue Vest</h3>
-                    <p>$35.00</p>
-                    <button class="btn">Buy Now</button>
-                </div>
-                <div class="product-card">
-                    <img src="../../images/streetwear.png" alt="Shirt 9">
-                    <h3>Core Streetwear</h3>
-                    <p>$55.00</p>
-                    <button class="btn">Buy Now</button>
-                </div>
-                <div class="product-card">
-                    <img src="../../images/zipup.png" alt="Shirt 10">
-                    <h3>Stealth Zip-Up</h3>
-                    <p>$48.00</p>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
+
     </section>
   <footer>
         &copy; 2025 NOIRÉL Co. All rights reserved.

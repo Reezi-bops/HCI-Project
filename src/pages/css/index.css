@@ -1,44 +1,116 @@
+/* === Animation === */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+/* === Animation End === */
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #121212;
-    color: #e0e0e0;
+    color:#563A17;
 }
+/* === Header === */
 header {
     position: sticky;
     top: 0;
     background-color: #000000;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
     z-index: 1000; 
-}
-
-nav a {
+  }
+  .header-buttons {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 30px;
+  }
+  .header-buttons button {
+    background-color: #9E8123;
+    color: #121212;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  .header-buttons button:hover {
+    transform: scale(1.05);
+    background-color: #bfa74f;
+    box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
+  }
+  .header-buttons button img.wishlish-icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) saturate(100%) sepia(41%) hue-rotate(4deg) saturate(700%) brightness(0.95);
+  }
+  .cart-button {
+    position: relative; 
+  }
+  .cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: inline;
+  }
+  .header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .logo img {
+    height: 170px; 
+    width: auto;
+  }
+  .header-buttons img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  nav a {
     margin: 0 15px;
-    color: #bfa74f;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-}
-nav a:hover {
-    color: #ffffff;
-}
-.logo {
-    width: 50px;  
-    height: auto;
-    margin-right: 15px; 
-}
+  }
+  nav a:hover {
+    color: #bfa74f;
+  }
+  /* === Header END === */
 .hero {
     padding: 40px 20px;
     text-align: center;
     background: linear-gradient(to bottom, #000000, #1e1e1e);
+    animation: slideIn 0.6s ease forwards;
 }
 .hero h1 {
     font-size: 48px;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #9E8123;
 }
 .hero p {
     font-size: 20px;
@@ -47,15 +119,17 @@ nav a:hover {
 .section {
     padding: 50px 20px;
     text-align: center;
+    animation: slideIn 0.6s ease forwards;
 }
 .products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    animation: slideIn 0.6s ease forwards;
 }
 .product-card {
-    background-color: #1e1e1e;
+    background-color: #2f2921;
     border: 1px solid #333;
     padding: 20px;
     border-radius: 10px;
@@ -63,7 +137,7 @@ nav a:hover {
     transition: transform 0.3s;
 }
 .product-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
 .product-card img {
     width: 200px;   
@@ -71,22 +145,28 @@ nav a:hover {
     border-radius: 5px;
 }
 .product-card h3 {
-    color: #ffffff;
+    color: #9E8123;
 }
 .product-card p {
-    color: #aaaaaa;
+    color: #ffffff;
 }
 .btn {
-    background-color: #bfa74f;
-    color: #000;
-    padding: 10px 20px;
+    background-color: #9E8123;
+    color: #121212;
+    padding: 8px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-weight: bold;
+    font-size: 13px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(191, 167, 79, 0.3);
+    
 }
 .btn:hover {
-    background-color: #d1bc6c;
+    transform: scale(1.05);
+    background-color: #bfa74f;
+    box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
 }
 
 footer {
@@ -94,4 +174,5 @@ footer {
     padding: 20px;
     background-color: #0d0d0d;
     color: #888888;
+    margin-top: 35px;
 }

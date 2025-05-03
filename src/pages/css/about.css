@@ -1,37 +1,115 @@
+/* === Animation === */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+/* === Animation End === */
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #121212;
     color: #e0e0e0;
   }
-  header {
-      position: sticky;
-      top: 0;
-      background-color: #000000;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      color: #ffffff;
-      z-index: 1000; 
-  }
-  nav a {
-    margin: 0 15px;
-    color: #bfa74f;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  nav a:hover {
-    color: #ffffff;
-  }
+/* === Header === */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #000000;
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 1000; 
+}
+.header-buttons {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 30px;
+}
+.header-buttons button {
+  background-color: #9E8123;
+  color: #121212;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.header-buttons button:hover {
+  transform: scale(1.05);
+  background-color: #bfa74f;
+  box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
+}
+.header-buttons button img.wishlish-icon {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) sepia(41%) hue-rotate(4deg) saturate(700%) brightness(0.95);
+}
+.cart-button {
+  position: relative; 
+}
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  display: inline;
+}
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.logo {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logo img {
+  height: 170px; 
+  width: auto;
+}
+.header-buttons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+nav a {
+  margin: 0 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #bfa74f;
+}
+/* === Header END === */
   .section {
     padding: 50px 20px;
     max-width: 1000px;
     margin: auto;
     text-align: center;
+    animation: slideIn 0.6s ease forwards;
   }
   h1, h2 {
-    color: #ffffff;
+    color: #9E8123;
   }
   p {
     color: #cccccc;
@@ -51,14 +129,14 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #333;
+    background-color: #0f0f0f;
     color: #e0e0e0;
   }
   input::placeholder, textarea::placeholder {
-    color: #999;
+    color: #563A17;
   }
   button {
-    background-color: #bfa74f;
+    background-color: #9E8123;
     color: #000;
     padding: 12px;
     border: none;

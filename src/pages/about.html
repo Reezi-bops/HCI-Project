@@ -8,15 +8,28 @@
 </head>
 <body>
 
-  <header>
-    NOIRÉL Co.
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-      <a href="about.html">Contact</a>
-    </nav>
+   <!-- Header -->
+   <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../../images/logo.png" alt="NOIRÉL Co. Logo">
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="about.html">Contact</a>
+      </nav>
+      <div class="header-buttons">
+        <button onclick="window.location.href='cart.html'">
+          <img src="../../images/cart.png" alt="carticon">
+          <span id="cart-count" class="cart-badge">0</span>
+        </button>
+        <button><img src="../../images/favicon.png" alt="wishlisht" id="openModalBtn"></button>
+      </div>
+    </div>
   </header>
+  <!-- Header END-->
 
   <section class="section">
     <h1>About NOIRÉL Co.</h1>
