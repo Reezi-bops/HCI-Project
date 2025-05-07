@@ -4,22 +4,6 @@ Welcome to **NOIRÉL**, an independent clothing store website crafted with care,
 
 ---
 
-## ✨ My Story
-
-NOIRÉL is more than just a project—it's a reflection of my journey as a designer and developer. I’ve always been fascinated by the way fashion allows people to express themselves and stand out from the crowd. Inspired by the streets, music, and urban culture, I wanted to bring my own vision to life through a brand that blends style with authenticity.
-
-The idea for NOIRÉL started small, as a concept sketched out in my notebook. But I knew I wanted to do more than design clothes—I wanted to learn how to build an **entire website** from scratch. With determination and curiosity, I began learning HTML, CSS, and JavaScript, diving into the world of web development for the first time.
-
-This website is the result of months of learning, experimenting, and growing. Every page—whether it's the shop, cart, checkout, or about page—represents a milestone in my coding journey. I worked hard to make sure the site not only looks clean and modern but also provides a smooth and intuitive experience for visitors.
-
-Along the way, I faced many challenges: figuring out how to properly link files, making sure the design was responsive, and ensuring the cart functionality worked just right. But every obstacle helped me learn something new, and seeing everything come together has been incredibly rewarding.
-
-NOIRÉL is still a work in progress, and I’m excited to continue improving it—adding new features, enhancing the design, and maybe even connecting it to a real backend someday.
-
-Thank you for checking out my project! I hope you enjoy browsing through NOIRÉL and find inspiration in both the style and the story behind it.
-
----
-
 ## 🚀 Why I Built This
 
 - The main reason: **It’s a school project** where I was tasked with creating a full website.

@@ -22,11 +22,11 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
-    z-index: 1000;
+    z-index: 1000; 
 }
 .header-buttons {
     position: absolute;
-    left: 100%;
+    left: 97%;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -47,15 +47,14 @@ header {
 .header-buttons button:hover {
     transform: scale(1.05);
     background-color: #bfa74f;
-    box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
-}
+    box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);  }
 .header-buttons button img.wishlish-icon {
     width: 22px;
     height: 22px;
     filter: brightness(0) saturate(100%) sepia(41%) hue-rotate(4deg) saturate(700%) brightness(0.95);
 }
 .cart-button {
-    position: relative;
+    position: relative; 
 }
 .cart-badge {
     position: absolute;
@@ -79,12 +78,12 @@ header {
 }
 .logo {
     position: absolute;
-    right: 100%;
-    top: 50%;
+    right: 97%;
+    top: 57%;
     transform: translateY(-50%);
 }
 .logo img {
-    height: 170px;
+    height: 170px; 
     width: auto;
 }
 .header-buttons img {
@@ -101,6 +100,7 @@ nav a {
 nav a:hover {
     color: #bfa74f;
 }
+  /* === Header END === */
 
 /* === Hero Section === */
 .hero {
