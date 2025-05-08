@@ -73,18 +73,6 @@
       return JSON.parse(localStorage.getItem('wishlistItems') || '[]');
     }
 
-    function saveWishlist(w) {
-      localStorage.setItem('wishlistItems', JSON.stringify(w));
-    }
-
-    function addToWishlist(name, image, price) {
-      const list = getWishlist();
-      if (!list.some(x => x.name === name)) {
-        list.push({ name, image, price });
-        saveWishlist(list);
-      }
-    }
-
     function removeFromWishlist(i) {
       const list = getWishlist();
       list.splice(i, 1);

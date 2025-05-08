@@ -22,29 +22,6 @@ function addToWishlist(name, image, price) {
       localStorage.setItem('wishlistItems', JSON.stringify(wishlist));
   }
 }
-
-// --- RENDER WISHLIST ---
-function renderWishlist() {
-  const wishlist = JSON.parse(localStorage.getItem('wishlistItems')) || [];
-  const container = document.getElementById('wishlistItems');
-  container.innerHTML = '';
-
-  if (wishlist.length === 0) {
-      container.innerHTML = '<p>Your wishlist is empty.</p>';
-      return;
-  }
-
-  wishlist.forEach(item => {
-      const div = document.createElement('div');
-      div.classList.add('wishlist-item');
-      div.innerHTML = `
-          <img src="${item.image}" alt="${item.name}" style="width: 50px; height: auto; margin-right: 10px;">
-          <strong>${item.name}</strong> - ${item.price}
-      `;
-      container.appendChild(div);
-  });
-}
-
 // --- DOM READY ---
 document.addEventListener('DOMContentLoaded', () => {
   const product = JSON.parse(localStorage.getItem('selectedProduct'));
