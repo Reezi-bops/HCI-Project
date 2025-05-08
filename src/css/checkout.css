@@ -34,7 +34,7 @@ header {
 }
 .header-buttons {
   position: absolute;
-  left: 1212px;
+  left: 99.5%;
   top: 50%;
   transform: translateY(-50%);
   display: flex;

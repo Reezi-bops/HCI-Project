@@ -23,16 +23,16 @@ header {
     font-weight: bold;
     color: #ffffff;
     z-index: 1000; 
-}
-.header-buttons {
+  }
+  .header-buttons {
     position: absolute;
-    left: 97%;
+    left: 98%;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     gap: 30px;
-}
-.header-buttons button {
+  }
+  .header-buttons button {
     background-color: #9E8123;
     color: #121212;
     padding: 8px 16px;
@@ -43,20 +43,21 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-}
-.header-buttons button:hover {
+  }
+  .header-buttons button:hover {
     transform: scale(1.05);
     background-color: #bfa74f;
-    box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);  }
-.header-buttons button img.wishlish-icon {
+    box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
+  }
+  .header-buttons button img.wishlish-icon {
     width: 22px;
     height: 22px;
     filter: brightness(0) saturate(100%) sepia(41%) hue-rotate(4deg) saturate(700%) brightness(0.95);
-}
-.cart-button {
+  }
+  .cart-button {
     position: relative; 
-}
-.cart-badge {
+  }
+  .cart-badge {
     position: absolute;
     top: -8px;
     right: -8px;
@@ -66,8 +67,8 @@ header {
     padding: 2px 6px;
     font-size: 12px;
     display: inline;
-}
-.header-container {
+  }
+  .header-container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
@@ -75,31 +76,31 @@ header {
     align-items: center;
     flex-direction: column;
     position: relative;
-}
-.logo {
+  }
+  .logo {
     position: absolute;
     right: 97%;
     top: 57%;
     transform: translateY(-50%);
-}
-.logo img {
+  }
+  .logo img {
     height: 170px; 
     width: auto;
-}
-.header-buttons img {
+  }
+  .header-buttons img {
     width: 24px;
     height: 24px;
     object-fit: contain;
-}
-nav a {
+  }
+  nav a {
     margin: 0 15px;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-}
-nav a:hover {
+  }
+  nav a:hover {
     color: #bfa74f;
-}
+  }
   /* === Header END === */
 
 /* === Hero Section === */

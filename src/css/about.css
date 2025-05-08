@@ -25,7 +25,7 @@ header {
 }
 .header-buttons {
   position: absolute;
-  left: 100%;
+  left: 98%;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -78,8 +78,8 @@ header {
 }
 .logo {
   position: absolute;
-  right: 100%;
-  top: 50%;
+  right: 97%;
+  top: 57%;
   transform: translateY(-50%);
 }
 .logo img {
