@@ -28,7 +28,7 @@ header {
 }
 .header-buttons {
   position: absolute;
-  left: 97%;
+  left: 98%;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -113,7 +113,6 @@ nav a:hover {
 .filters {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
 }
 .filter-btn {
   background: none;
@@ -153,7 +152,7 @@ nav a:hover {
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
-  gap: 90px;
+  gap: 95px;
   justify-content: start;
   padding: 20px;
   animation: slideIn 0.6s ease forwards;
@@ -322,11 +321,16 @@ nav a:hover {
 
 /* === Footer === */
 footer {
-  text-align: center;
-  padding: 20px;
   background-color: #0d0d0d;
   color: #888888;
-  margin-top: 50px;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.4);
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 10;
 }
 /* === Footer END === */
 
@@ -339,7 +343,6 @@ footer {
   }
 
   .filters {
-    flex-direction: column;
     align-items: stretch;
   }
 
@@ -356,13 +359,84 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  header {
+@media (max-width: 768px) {
+  .header-container {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .header-buttons {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 2px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: #bfa74f;
+  }
+
+  .header-buttons {
+    position: absolute;
+    left: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .search-and-filter {
+    display: flex;
+    flex-direction: column-reverse; /* Puts the filter button on top */
+    align-items: center;
+    gap: 10px; /* Optional spacing */
+  }
+
+  .search-input input {
+    width: 90%; /* Make it responsive */
+  }
+
+  .filter-button button {
+    width: auto; /* Adjust if needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .product-card {
+    height: auto;
+    padding: 12px;
+  }
+
+  .product-image {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .search-container input {
-    font-size: 14px;
+    width: 100%;
   }
 }
+
+
