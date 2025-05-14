@@ -358,10 +358,17 @@ nav a:hover {
     }
       /* === Modal END == */
       
+  /* === Footer === */
   footer {
-    text-align: center;
-    padding: 20px;
     background-color: #0d0d0d;
-    color: #888;
-    margin-top: 290px;
+    color: #888888;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.4);
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 10;
   }
+  /* === Footer END === */
