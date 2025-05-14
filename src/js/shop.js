@@ -46,13 +46,24 @@ filterButtons.forEach(btn => {
     updateFilters();
   });
 });
-
 // --- SEARCH INPUT EVENT ---
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
     searchQuery = e.target.value.trim().toLowerCase();
     updateFilters();
   });
+}
+// --- GET WISHLIST ---
+function getWishlist() {
+  return JSON.parse(localStorage.getItem('wishlistItems')) || [];
+}
+// --- ADD TO WISHLIST ---
+function addToWishlist(name, image, price) {
+  let wishlist = getWishlist();
+  if (!wishlist.find(item => item.name === name)) {
+    wishlist.push({ name, image, price });
+  }
+  localStorage.setItem('wishlistItems', JSON.stringify(wishlist));
 }
 // --- WISHLIST BUTTON EVENTS ---
 document.querySelectorAll('.fav-btn').forEach(button => {
