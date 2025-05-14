@@ -7,26 +7,29 @@
   <link rel="stylesheet" href="src/css/index.css">
 <body>
 
+  <!-- Header -->
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="images/logo.png" alt="NOIRÉL Co. Logo">
+        <img src="../../images/logo.png" alt="NOIRÉL Co. Logo">
       </div>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="src/pages/shop.html">Shop</a>
-        <a href="src/pages/about.html">About</a>
-        <a href="src/pages/about.html">Contact</a>
+        <a href="src/pages/lookbook.html">LOOKBOOK</a>
+        <a href="src/pages/shop.html">STORE</a>
+        <a href="index.html">HOME</a>
+        <a href="src/pages/about.html">ABOUT</a>
+        <a href="src/pages/about.html">CONTACT</a>
       </nav>
       <div class="header-buttons">
         <button onclick="window.location.href='cart.html'">
-          <img src="images/cart.png" alt="carticon">
+          <img src="../../images/cart.png" alt="carticon">
           <span id="cart-count" class="cart-badge">0</span>
         </button>
-        <button><img src="images/favicon.png" alt="wishlisht" id="openModalBtn"></button>
+        <button><img src="../../images/favicon.png" alt="wishlisht" id="openModalBtn"></button>
       </div>
     </div>
   </header>
+  <!-- Header END-->
 
   <section class="hero">
         <h1>Wear Your Style, Every Day</h1>
@@ -68,11 +71,34 @@
                         <button class="btn">Buy Now</button>
                     </a>
                 </div>
-
     </section>
+
+      <!-- Wishlist Modal -->
+  <div class="modal" id="wishlistModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Wishlist</h2>
+      <div id="wishlistItems">
+        <p class="empty-message">Your wishlist is empty.</p>
+      </div>
+      <template id="wishlistItemTemplate">
+        <div class="wishlist-item">
+          <div class="wishlist-info">
+            <img class="wishlist-img" src="" alt="">
+            <div class="wishlist-details">
+              <span class="wishlist-name"></span>
+              <span class="wishlist-price"></span>
+            </div>
+          </div>
+          <button class="remove-wishlist-btn">Remove</button>
+        </div>
+      </template>
+    </div>
+  </div>
+  <!-- Wishlist Modal END-->
   <footer>
         &copy; 2025 NOIRÉL Co. All rights reserved.
   </footer>
-
+  <script src="/src/js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lookbook</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/css/lookbook.css">
+</head>
+<body class="bg-[#121212] text-white min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../../images/logo.png" alt="NOIRÉL Co. Logo">
+      </div>
+      <nav>
+        <a href="lookbook.html  ">LOOKBOOK</a>
+        <a href="shop.html">STORE</a>
+        <a href="../../index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="about.html">CONTACT</a>
+      </nav>
+      <div class="header-buttons">
+        <button onclick="window.location.href='cart.html'">
+          <img src="../../images/cart.png" alt="carticon">
+          <span id="cart-count" class="cart-badge">0</span>
+        </button>
+        <button><img src="../../images/favicon.png" alt="wishlisht" id="openModalBtn"></button>
+      </div>
+    </div>
+  </header>
+  <!-- Header END-->
+  
+  <div id="menu">
+    <div id="menu-items">
+      <a href="#" class="menu-item" role="link">Hats</a>
+      <a href="#" class="menu-item" role="link">Outer</a>
+      <a href="#" class="menu-item" role="link">Shirts</a>
+      <a href="#" class="menu-item" role="link">Pants</a>
+    </div>
+    <div id="menu-background-pattern"></div>
+    <div id="menu-background-image"></div>
+  </div>
+
+  <!-- Optional overlay if used in nav/menu behavior -->
+  <div id="menu-overlay" class="hidden"></div>
+
+  <!-- Main Content: Lookbook Gallery -->
+  <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+    <!-- Replace with your local images if needed -->
+    <img class="image" src="/images/velours.png" draggable="false" />
+    <img class="image" src="/images/shadowtee.png" draggable="false" />
+    <img class="image" src="/images/blackfedora.png" draggable="false" />
+    <img class="image" src="/images/girlsuit.png" draggable="false" />
+    <img class="image" src="/images/polo.png" draggable="false" />
+    <img class="image" src="/images/poloire.png" draggable="false" />
+    <img class="image" src="/images/octave.png" draggable="false" />
+    <img class="image" src="/images/girlsuit.png" draggable="false" />
+    <img class="image" src="/images/metrofit.png" draggable="false" />
+    <img class="image" src="/images/lunaranoir.png" draggable="false" />
+  </div>
+
+    <!-- Wishlist Modal -->
+  <div class="modal" id="wishlistModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Wishlist</h2>
+      <div id="wishlistItems">
+        <p class="empty-message">Your wishlist is empty.</p>
+      </div>
+      <template id="wishlistItemTemplate">
+        <div class="wishlist-item">
+          <div class="wishlist-info">
+            <img class="wishlist-img" src="" alt="">
+            <div class="wishlist-details">
+              <span class="wishlist-name"></span>
+              <span class="wishlist-price"></span>
+            </div>
+          </div>
+          <button class="remove-wishlist-btn">Remove</button>
+        </div>
+      </template>
+    </div>
+  </div>
+  <!-- Wishlist Modal END-->
+
+  <!-- Footer -->
+  <footer class="flex justify-center py-10 text-white text-sm font-light">
+    3 — 8
+  </footer>
+
+  <script src="/src/js/lookbook.js"></script>
+
+</body>
+</html>

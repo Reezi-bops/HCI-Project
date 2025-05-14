@@ -20,12 +20,14 @@ header {
   top: 0;
   background-color: #000000;
   padding: 15px;
+  font-family: "Playfair Display", serif;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #ffffff;
   z-index: 1000; 
 }
+
 .header-buttons {
   position: absolute;
   left: 98%;
@@ -41,7 +43,6 @@ header {
   border: none;
   border-radius: 10px;
   font-weight: bold;
-  font-size: 13px;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -50,6 +51,7 @@ header {
   transform: scale(1.05);
   background-color: #bfa74f;
   box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
+  
 }
 .header-buttons button img.wishlish-icon {
   width: 22px;
@@ -99,6 +101,7 @@ nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
 }
 nav a:hover {
   color: #bfa74f;
@@ -170,7 +173,9 @@ nav a:hover {
   transition: transform 0.5s ease;
 }
 .product-card:hover {
-  transform: translateY(-5px);
+    transform: scale(1.05);
+  background-color: #4e3f0d;
+  box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
 }
 .product-header {
   display: flex;

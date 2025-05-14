@@ -3,61 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NOIRÉL | About & Contact</title>
+  <title>Noirél Contact</title>
   <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Morley:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
 
-   <!-- Header -->
-   <header>
+<body>
+    <!-- Header -->
+  <header>
     <div class="header-container">
       <div class="logo">
         <img src="../../images/logo.png" alt="NOIRÉL Co. Logo">
       </div>
       <nav>
-        <a href="../../index.html ">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">About</a>
-        <a href="about.html">Contact</a>
+        <a href="lookbook.html  ">LOOKBOOK</a>
+        <a href="shop.html">STORE</a>
+        <a href="../../index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="about.html">CONTACT</a>
       </nav>
       <div class="header-buttons">
         <button onclick="window.location.href='cart.html'">
           <img src="../../images/cart.png" alt="carticon">
           <span id="cart-count" class="cart-badge">0</span>
         </button>
-        <button><img src="../../images/favicon.png" alt="wishlisht" id="openModalBtn"></button>
+        <button id="openModalBtn"><img src="../../images/favicon.png" alt="wishlisht"></button>
       </div>
     </div>
   </header>
   <!-- Header END-->
 
-  <!-- Main -->
-  <section class="section">
-    <h1>About NOIRÉL Co.</h1>
-    <p>
-      Welcome to NOIRÉL Co., where fashion meets boldness and elegance. We believe that wearing dark colors is a form of self-expression — mysterious, confident, and timeless.  
-      <br><br>
-      Each piece of our collection is crafted with premium materials and designed to empower you to own your style every day.  
-      <br><br>
-      From streetwear to statement accessories, we are here to bring your dark side to light.
-    </p>
+  <main class="contact-section">
+      <section class="section">
+    <h1>About NOIRÉL Store</h1>
+  <p>
+    Welcome to <strong>NOIRÉL</strong> — where fashion embodies boldness, elegance, and individuality.  
+    <br><br>
+    We believe dark colors are more than a style; they’re a powerful form of self-expression — mysterious, confident, and timeless.  
+    <br><br>
+    Every piece in our collection is thoughtfully crafted with premium materials, designed to help you own your look with confidence every day.  
+    <br><br>
+    From urban streetwear to striking statement accessories, NOIRÉL is here to bring your boldest self into the light.
+  </p>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.</p>
   </section>
+    
+    <h3 class="section-title">Get in Touch</h3>
 
-  <section class="section">
-    <h2>Contact Us</h2>
-    <p>Have questions or want to collaborate? Fill out the form below and we'll get back to you!</p>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-  <!-- Main END-->
+    <section class="contact-grid">
+      <div class="contact-box">
+        <h4>Email</h4>
+        <p>For general inquiries, you can email us at:</p>
+        <ul>
+          <li>Customer Support: <a href="mailto:support@noirelshop.com">support@noirelshop.com</a></li>
+          <li>Wholesale: <a href="mailto:wholesale@noirelshop.com">wholesale@noirelshop.com</a></li>
+          <li>Partnerships: <a href="mailto:partnerships@noirelshop.com">partnerships@noirelshop.com</a></li>
+        </ul>
+      </div>
 
-  <footer>
+      <div class="contact-box">
+        <h4>Business Hours</h4>
+        <ul>
+          <li>Monday - Friday: 9:00 AM – 6:00 PM</li>
+          <li>Saturday: 10:00 AM – 4:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+        <p>Any inquiries sent outside of business hours will be responded to on the next working day.</p>
+      </div>
+
+      <div class="contact-box">
+        <h4>Phone</h4>
+        <p>Prefer to talk? Give us a call at:</p>
+        <ul>
+          <li>Customer Service: +63 968 1981881</li>
+          <li>Business Inquiries: +63 906 8164 444</li>
+        </ul>
+      </div>
+
+      <div class="contact-box">
+        <h4>Address</h4>
+        <p>Visit or send us mail at: Noirél<br>8015, Purók 4, Maanay<br>Pandao City, Philippines 8000</p>
+      </div>
+
+      <div class="contact-box">
+        <h4>Follow Us</h4>
+        <p>Stay connected with us on social media for the latest updates, offers, and designs:</p>
+        <ul>
+          <li>Instagram: <a href="https://www.instagram.com/noirelshop">@noirelshop</a></li>
+          <li>Facebook: <a href="https://www.facebook.com/Noirelshop">facebook.com/Noirelshop</a></li>
+          <li>Twitter: <a href="https://www.twitter.com/Noirelshop">@Noirelshop</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-box">
+        <h4>Feedback or Suggestions?</h4>
+        <p>We value your feedback! If you'd like to share your thoughts or suggestions, please fill out our <a href="https://forms.gle/uv7Jon1ANJtW3WVh9">Feedback Form</a>.</p>
+        <p>Thank you for choosing Noirél. We look forward to hearing from you!</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Wishlist Modal -->
+  <div class="modal" id="wishlistModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Wishlist</h2>
+      <div id="wishlistItems">
+        <p class="empty-message">Your wishlist is empty.</p>
+      </div>
+      <template id="wishlistItemTemplate">
+        <div class="wishlist-item">
+          <div class="wishlist-info">
+            <img class="wishlist-img" src="" alt="">
+            <div class="wishlist-details">
+              <span class="wishlist-name"></span>
+              <span class="wishlist-price"></span>
+            </div>
+          </div>
+          <button class="remove-wishlist-btn">Remove</button>
+        </div>
+      </template>
+    </div>
+  </div>
+  <!-- Wishlist Modal END-->
+
+    <footer>
     &copy; 2025 NOIRÉL Co. All rights reserved.
   </footer>
-
+  <script src="/src/js/about.js"></script>
 </body>
 </html>

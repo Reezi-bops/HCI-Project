@@ -14,12 +14,14 @@ header {
   top: 0;
   background-color: #000000;
   padding: 15px;
+  font-family: "Playfair Display", serif;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #ffffff;
   z-index: 1000; 
 }
+
 .header-buttons {
   position: absolute;
   left: 98%;
@@ -35,7 +37,6 @@ header {
   border: none;
   border-radius: 10px;
   font-weight: bold;
-  font-size: 13px;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -44,6 +45,7 @@ header {
   transform: scale(1.05);
   background-color: #bfa74f;
   box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
+  
 }
 .header-buttons button img.wishlish-icon {
   width: 22px;
@@ -93,11 +95,55 @@ nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
 }
 nav a:hover {
   color: #bfa74f;
 }
 /* === Header END === */
+
+/* === Filters & Search === */
+.section {
+  padding: 50px 10px;
+  animation: slideIn 0.6s ease forwards; 
+}
+.filters {
+  display: flex;
+  align-items: center;
+}
+.filter-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  border-bottom: 2px solid #bfa74f;
+  color: #bfa74f; 
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bfa74f;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+.search-container input {
+  padding: 8px 12px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  width: 300px;
+}
+/* === Filters & Search END === */
   .container {
     max-width: 1000px;
     margin: 70px auto;
