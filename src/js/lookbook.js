@@ -1,3 +1,8 @@
+
+  const cartBadge = document.getElementById('cart-count');
+  const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+  cartBadge.textContent = cart.reduce((acc, item) => acc + (item.qty || 0), 0);
+
 // --- Lookbook Image Track ---
 const track = document.getElementById("image-track");
 

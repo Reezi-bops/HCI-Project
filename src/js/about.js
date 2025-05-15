@@ -74,3 +74,7 @@ function removeFromWishlist(index) {
   localStorage.setItem('wishlistItems', JSON.stringify(wishlist));
   renderWishlist();
 }
+
+  const cartBadge = document.getElementById('cart-count');
+  const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+  cartBadge.textContent = cart.reduce((acc, item) => acc + (item.qty || 0), 0);

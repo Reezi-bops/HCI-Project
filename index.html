@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NOIRÉL | Homepage</title>
-  <link rel="stylesheet" href="src/css/index.css">
-<body>
-
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>NOIR</title>
+  <link rel="stylesheet" href="/src/css/index.css">
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
   <!-- Header -->
   <header>
     <div class="header-container">
@@ -14,14 +14,14 @@
         <img src="../../images/logo.png" alt="NOIRÉL Co. Logo">
       </div>
       <nav>
-        <a href="src/pages/lookbook.html">LOOKBOOK</a>
-        <a href="src/pages/shop.html">STORE</a>
+        <a href="/src/pages/lookbook.html  ">LOOKBOOK</a>
+        <a href="/src/pages/shop.html">STORE</a>
         <a href="index.html">HOME</a>
         <a href="/src/pages/about.html">ABOUT</a>
         <a href="/src/pages/about.html">CONTACT</a>
       </nav>
       <div class="header-buttons">
-        <button onclick="window.location.href='cart.html'">
+        <button onclick="window.location.href='/src/pages/cart.html'">
           <img src="../../images/cart.png" alt="carticon">
           <span id="cart-count" class="cart-badge">0</span>
         </button>
@@ -30,76 +30,37 @@
     </div>
   </header>
   <!-- Header END-->
-
-  <section class="hero">
-        <h1>Wear Your Style, Every Day</h1>
-        <p>Dark, bold, and designed for your edge.</p>
-  </section>
-
-  <section class="section">
-        <h2>Featured Products</h2>
-            <div class="products">
-                <div class="product-card">
-                    <img src="images/shadowtee.png" alt="Shirt 1">
-                    <h3>Shadow Tee</h3>
-                    <p>PHP 949</p>
-                    <a href="src/pages/shop.html">
-                        <button class="btn">Buy Now</button>
-                    </a>
-                </div>
-                <div class="product-card">
-                <img src="images/midnighthoodie.png" alt="Shirt 2">
-                    <h3>Midnight Hoodie</h3>
-                    <p>PHP 1,349</p>
-                    <a href="src/pages/shop.html">
-                        <button class="btn">Buy Now</button>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <img src="images/lunaranoir.png" alt="Shirt 3">
-                    <h3>Lunara Noir</h3>
-                    <p>PHP 949</p>
-                    <a href="src/pages/shop.html">
-                        <button class="btn">Buy Now</button>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <img src="images/poloire.png" alt="Shirt 4">
-                    <h3>Luna Poloire</h3>
-                    <p>PHP 1,999</p>
-                    <a href="src/pages/shop.html">
-                        <button class="btn">Buy Now</button>
-                    </a>
-                </div>
-
-    </section>
-
-    <!-- Wishlist Modal -->
-  <div class="modal" id="wishlistModal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Your Wishlist</h2>
-      <div id="wishlistItems">
-        <p class="empty-message">Your wishlist is empty.</p>
+  <main>
+    <section id="menSection" aria-label="Men section" onclick="location.href='/src/pages/men.html'" role="link">
+      <h2>MEN</h2>
+      <div class="image-wrapper">
+        <img
+          alt="Men Model"
+          class="men-image"s
+          src="../../images/for homepage/men.png"
+          width="400"
+          height="600"
+          loading="lazy"
+          draggable="false"
+        />
       </div>
-      <template id="wishlistItemTemplate">
-        <div class="wishlist-item">
-          <div class="wishlist-info">
-            <img class="wishlist-img" src="" alt="">
-            <div class="wishlist-details">
-              <span class="wishlist-name"></span>
-              <span class="wishlist-price"></span>
-            </div>
-          </div>
-          <button class="remove-wishlist-btn">Remove</button>
-        </div>
-      </template>
-    </div>
-  </div>
-  <!-- Wishlist Modal END-->
-  <footer>
-        &copy; 2025 NOIRÉL Co. All rights reserved.
-  </footer>
+    </section>
+    <section id="womenSection" aria-label="Women section" onclick="location.href='/src/pages/women.html'" role="link">
+      <h2>WOMEN</h2>
+      <div class="image-wrapper">
+        <img
+          alt="Woman model wearing black loose clothing sitting on a box"
+          class="women-image"
+          src="../../images/for homepage/women.png"
+          width="400"
+          height="600"
+          loading="lazy"
+          draggable="false"
+        />
+      </div>
+    </section>
+  </main>
 
+  <script src="/src/js/index.js"></script>
 </body>
 </html>

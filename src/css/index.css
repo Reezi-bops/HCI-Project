@@ -3,13 +3,15 @@
     from { opacity: 0; transform: translateX(50px); }
     to { opacity: 1; transform: translateX(0); }
 }
+:root {
+  --grid-line: #111827;
+  --gold-color: #b4970a;
+}
 
-/* === Body === */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #121212;
-    color:#563A17;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  background-color: #2b2929;
 }
 
 /* === Header === */
@@ -106,171 +108,110 @@ nav a:hover {
 }
 /* === Header END === */
 
-/* === Hero Section === */
-.hero {
-    padding: 40px 20px;
-    text-align: center;
-    background: linear-gradient(to bottom, #000000, #1e1e1e);
-    animation: slideIn 0.6s ease forwards;
-}
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #9E8123;
-}
-.hero p {
-    font-size: 20px;
-    color: #cccccc;
+.nav-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-/* === Section === */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-    animation: slideIn 0.6s ease forwards;
+main {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  animation: slideIn 0.6s ease forwards;
 }
 
-/* === Products Grid === */
-.products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    animation: slideIn 0.6s ease forwards;
+section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  transition: flex 0.7s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* === Product Card === */
-.product-card {
-    background-color: #2f2921;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    transition: transform 0.3s;
-}
-.product-card:hover {
-  transform: scale(1.05);
-  background-color: #4e3f0d;
-  box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
-}
-.product-card img {
-    width: 200px;
-    height: 250px;
-    border-radius: 5px;
-}
-.product-card h3, h2 {
-    color: #9E8123;
-}
-.product-card p {
-    color: #ffffff;
-}
-
-/* === Button === */
-.btn {
-    background-color: #9E8123;
-    color: #121212;
-    padding: 8px 24px;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(191, 167, 79, 0.3);
-}
-.btn:hover {
-    transform: scale(1.05);
-    background-color: #bfa74f;
-    box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
-}
-
-/* === Footer === */
-footer {
-  background-color: #0d0d0d;
-  color: #888888;
-  text-align: center;
-  padding: 15px 20px;
-  font-size: 14px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.4);
-  letter-spacing: 1px;
+section h2 {
   position: relative;
   z-index: 10;
+  font-size: 1.125rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  user-select: none;
 }
-/* === Footer END === */
-/* Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
+
+.image-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+img.men-image,
+img.women-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-    }
-    .modal.show {
-  display: block;
-    }
-    .modal-content {
-  background-color: #121212;
-  margin: 5% auto;
-  padding: 30px;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 12px;
-  text-align: center;
-  color: #9E8123;
-    }
-    .close {
-  color: #9E8123;
-  float: right;
-  font-size: 32px;
-  font-weight: bold;
-  cursor: pointer;
-    }
-    .close:hover {
-  color: white;
-    }
-    .wishlist-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #444;
-  padding: 10px 0;
-  color: #9E8123;
+  object-fit: cover;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.7s ease;
+  opacity: 0.2;
+  pointer-events: none;
+  user-select: none;
 }
 
-.wishlist-info {
-  display: flex;
-  align-items: center;
+main:hover section {
+  flex: 0.5;
 }
 
-.wishlist-info img {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
-  
+main:hover section:hover {
+  flex: 1.5;
 }
 
-.remove-wishlist-btn {
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
+main:hover section:hover img {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
 }
-    .wishlist-item button {
-  background: none;
-  border: none;
-  color: #9E8123;
-  cursor: pointer;
-  font-size: 14px;
-    }
-    .wishlist-item button:hover {
-  color: #c4a65b;
-    }
-/* === Modal END == */
+
+main:hover section:not(:hover) img {
+  opacity: 0.1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+  section {
+    flex: none !important;
+    height: 50vh;
+    padding-top: 1rem;
+  }
+  main:hover section:hover {
+    height: 70vh !important;
+  }
+  main:hover section:not(:hover) {
+    height: 30vh !important;
+  }
+  img.men-image,
+  img.women-image {
+    width: 150%;
+    height: 150%;
+  }
+  header nav ul {
+    gap: 1.5rem;
+  }
+  .nav-logo {
+    width: 80px;
+    height: 80px;
+  }
+}

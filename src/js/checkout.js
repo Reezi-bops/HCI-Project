@@ -15,7 +15,7 @@ function selectSize(button) {
 }
 
 // --- ADD TO WISHLIST ---
-function addToWishlist(name, image, price) {
+function addToWishlist(name, image, price,) {
   let wishlist = JSON.parse(localStorage.getItem('wishlistItems')) || [];
   if (!wishlist.some(item => item.name === name)) {
       wishlist.push({ name, image, price });
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.product-info h1').innerText = product.name;
       document.querySelector('.price').innerText = product.price;
       document.querySelector('.image-container').style.backgroundImage = `url('${product.image}')`;
-  }
+    }
 
   const cartBadge = document.getElementById('cart-count');
   const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
