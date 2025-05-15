@@ -22,7 +22,7 @@ function updateFilters() {
 }
 
 // --- BUY PRODUCT ---
-function buyProduct(name, image, price) {
+function buyProduct(name, image, price,) {
   const product = { name, image, price };
   localStorage.setItem('selectedProduct', JSON.stringify(product));
   window.location.href = 'checkout.html';
