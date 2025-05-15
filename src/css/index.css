@@ -142,21 +142,22 @@ nav a:hover {
 /* === Product Card === */
 .product-card {
     background-color: #2f2921;
-    border: 1px solid #333;
     padding: 20px;
     border-radius: 10px;
     width: 250px;
     transition: transform 0.3s;
 }
 .product-card:hover {
-    transform: translateY(-5px);
+  transform: scale(1.05);
+  background-color: #4e3f0d;
+  box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
 }
 .product-card img {
     width: 200px;
     height: 250px;
     border-radius: 5px;
 }
-.product-card h3 {
+.product-card h3, h2 {
     color: #9E8123;
 }
 .product-card p {
@@ -196,8 +197,7 @@ footer {
   z-index: 10;
 }
 /* === Footer END === */
-
-  /* Modal Styles */
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;

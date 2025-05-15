@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NOIRÉL | Lookbook</title>
-  <link rel="stylesheet" href="../css/lookbook.css">
-</head>
-<body class="bg-[#121212] text-white min-h-screen flex flex-col">
+    <link rel="stylesheet" href="/src/css/nav.css">
+    <link rel="stylesheet" href="/src/css/lookbook.css">
 
   <!-- Header -->
   <header>
@@ -31,65 +26,23 @@
     </div>
   </header>
   <!-- Header END-->
-  
-  <div id="menu">
-    <div id="menu-items">
-      <a href="#" class="menu-item" role="link">Hats</a>
-      <a href="#" class="menu-item" role="link">Outer</a>
-      <a href="#" class="menu-item" role="link">Shirts</a>
-      <a href="#" class="menu-item" role="link">Pants</a>
-    </div>
-    <div id="menu-background-pattern"></div>
-    <div id="menu-background-image"></div>
-  </div>
 
+  <div id="navbar-placeholder"></div>
 
+<div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+  <img class="image" src="/images/Lookbook/pic1.png" draggable="false" />
+  <img class="image" src="/images/Lookbook/pic2.png" draggable="false" />
+  <img class="image" src="/images/Lookbook/pic3.png" draggable="false" />
+  <img class="image" src="/images/Lookbook/pic4.png" draggable="false" />
+  <img class="image" src="/images/Lookbook/pic5.png" draggable="false" />
+  <img class="image" src="/images/Lookbook/pic6.png" draggable="false" />
+  <img class="image" src="/images/Lookbook/pic7.png" draggable="false" />
+  <img class="image" src="/images/Lookbook/pic8.png" draggable="false" />
 
-  <!-- Main Content: Lookbook Gallery -->
-  <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-    <!-- Replace with your local images if needed -->
-    <img class="image" src="../../images/velours.png" draggable="false" />
-    <img class="image" src="../../images/shadowtee.png" draggable="false" />
-    <img class="image" src="../../images/blackfedora.png" draggable="false" />
-    <img class="image" src="../../images/girlsuit.png" draggable="false" />
-    <img class="image" src="../../images/polo.png" draggable="false" />
-    <img class="image" src="../../images/poloire.png" draggable="false" />
-    <img class="image" src="../../images/octave.png" draggable="false" />
-    <img class="image" src="../../images/girlsuit.png" draggable="false" />
-    <img class="image" src="../../images/metrofit.png" draggable="false" />
-    <img class="image" src="../../images/lunaranoir.png" draggable="false" />
-  </div>
+</div>
 
-    <!-- Wishlist Modal -->
-  <div class="modal" id="wishlistModal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Your Wishlist</h2>
-      <div id="wishlistItems">
-        <p class="empty-message">Your wishlist is empty.</p>
-      </div>
-      <template id="wishlistItemTemplate">
-        <div class="wishlist-item">
-          <div class="wishlist-info">
-            <img class="wishlist-img" src="" alt="">
-            <div class="wishlist-details">
-              <span class="wishlist-name"></span>
-              <span class="wishlist-price"></span>
-            </div>
-          </div>
-          <button class="remove-wishlist-btn">Remove</button>
-        </div>
-      </template>
-    </div>
-  </div>
-  <!-- Wishlist Modal END-->
-
-  <!-- Footer -->
-  <footer class="flex justify-center py-10 text-white text-sm font-light">
-    3 — 8
-  </footer>
-
-  <script src="/src/js/lookbook.js"></script>
+  <script src="/src/js/Lookbook.js"></script>
+  <script src="/src/js/nav.js"></script>
 
 </body>
 </html>

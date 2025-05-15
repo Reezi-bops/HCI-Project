@@ -153,7 +153,7 @@ nav a:hover {
   h1 {
     text-align: center;
     margin-bottom: 30px;
-    color: #bfa74f;
+    color: #9E8123;
   }
   table {
     width: 100%;
@@ -167,7 +167,7 @@ nav a:hover {
   }
   th {
     font-size: 18px;
-    color: #bfa74f;
+    color: #9E8123;
   }
   .product {
     display: flex;
@@ -302,7 +302,7 @@ nav a:hover {
     outline: none;
   }
   #paymentForm input::placeholder {
-    color: #563A17;
+    color: #9E8123;
   }
   #paymentForm button,
   .back-btn {
@@ -408,6 +408,7 @@ nav a:hover {
   footer {
     background-color: #0d0d0d;
     color: #888888;
+    margin-top: 220px;
     text-align: center;
     padding: 15px 20px;
     font-size: 14px;

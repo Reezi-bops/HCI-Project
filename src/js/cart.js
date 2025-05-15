@@ -132,3 +132,24 @@
         })
       );
     });
+
+  const paymentModal = document.getElementById("paymentModal");
+  const closeBtn = document.querySelector("#paymentModal .close");
+
+  function openPaymentModal() {
+    paymentModal.style.display = "block";
+  }
+
+  function closePaymentModal() {
+    paymentModal.style.display = "none";
+  }
+
+  closeBtn.onclick = function () {
+    closePaymentModal();
+  }
+
+  window.onclick = function (event) {
+    if (event.target === paymentModal) {
+      closePaymentModal();
+    }
+  }

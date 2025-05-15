@@ -173,7 +173,7 @@ nav a:hover {
   transition: transform 0.5s ease;
 }
 .product-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
   background-color: #4e3f0d;
   box-shadow: 0 6px 14px rgba(255, 255, 200, 0.4);
 }
